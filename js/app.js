@@ -86,11 +86,8 @@ const reset = () => {
   // resets the game board
   start.addEventListener('click', () => {
     overlay.style.display = 'none';  
-    if (overlay.classList === 'lose') {
-      overlay.classList.remove = 'lose';
-    } else {
-      overlay.classList.remove = 'win';
-    }
+    overlay.classList.remove('lose');
+    overlay.classList.remove('win');
   });
   missed = 0;
   const board = document.querySelectorAll('.space, .letter');

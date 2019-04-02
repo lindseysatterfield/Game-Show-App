@@ -53,6 +53,7 @@ button {
   -webkit-transition: var(--transition);
   -o-transition: var(--transition);
   transition: var(--transition);
+  display: block;
 }
 
 .main-container {
@@ -97,8 +98,11 @@ button {
 
 .show {
   color: #000;
-  background-color: #76CE82;
+  transition: all .5s ease;
+  background-color: #FAACA8;
+  background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
 }
+
 
 /* Keyboard */
 
@@ -112,6 +116,7 @@ button {
   border-radius: 5px;
   font-size: var(--font-size-medium);
   color: #FFFFFF;
+  transition: all 1s ease;
 }
 
 .btn__reset {

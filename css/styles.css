@@ -1,5 +1,6 @@
 /* Main styles */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&Roboto:300');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
 
 /* Variables */
 
@@ -39,6 +40,13 @@ h2 {
   text-transform: uppercase;
   font-family: 'Open Sans', sans-serif;
   font-size: var(--font-size-large);
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+  font-family: 'Pacifico', cursive;
+  font-size: 35px;
   margin: 0;
 }
 
@@ -98,7 +106,7 @@ button {
 
 .show {
   color: #000;
-  transition: all .5s ease;
+  transition: all .3s ease;
   background-color: #FAACA8;
   background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
 }
@@ -163,10 +171,18 @@ button {
   color: var(--color-win);
 }
 
+.win h3 {
+  display: none;
+}
+
 .lose {
   background-color: var(--color-lose);
 }
 
 .lose a {
   color: var(--color-lose);
+}
+
+.lose h3 {
+  display: none;
 }

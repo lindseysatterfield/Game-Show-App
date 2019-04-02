@@ -59,30 +59,6 @@ const checkLetter = (button) => {
 	return match;
 }
 
-const reset = () => {
-  // resets the game board
-  start.addEventListener('click', () => {
-    overlay.classList.remove = 'win';
-    overlay.classList.remove = 'lose';
-    overlay.style.display = 'none';
-  });
-  missed = 0;
-  const board = document.querySelectorAll('.space, .letter');
-  for (let i = 0; i < board.length; i++) {
-    ul.removeChild(board[i]);
-  }
-  for (let i = 0; i < buttons.length; i++) {
-    buttons[i].className = "";
-    buttons[i].disabled = false;
-  }
-  const phraseArray = getRandomPhraseAsArray(phrases);
-  addPhraseToDisplay(phraseArray); 
-  hearts.forEach((img) => {
-    // resets the hearts
-    img.src = 'images/liveHeart.png';
-  });
-}
-
 const checkWin = () => {
   // checks to see if user key matches the correct letter
   if (show.length === letter.length) {
@@ -105,6 +81,33 @@ const checkWin = () => {
         }, 1300);
       }
     }
+
+const reset = () => {
+  // resets the game board
+  start.addEventListener('click', () => {
+    overlay.style.display = 'none';  
+    if (overlay.classList === 'lose') {
+      overlay.classList.remove = 'lose';
+    } else {
+      overlay.classList.remove = 'win';
+    }
+  });
+  missed = 0;
+  const board = document.querySelectorAll('.space, .letter');
+  for (let i = 0; i < board.length; i++) {
+    ul.removeChild(board[i]);
+  }
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].className = "";
+    buttons[i].disabled = false;
+  }
+  const phraseArray = getRandomPhraseAsArray(phrases);
+  addPhraseToDisplay(phraseArray); 
+  hearts.forEach((img) => {
+    // resets the hearts
+    img.src = 'images/liveHeart.png';
+    });
+}
 
 // ------------------------------------------------------------------- //
 
